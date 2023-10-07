@@ -11,7 +11,7 @@ const Contact = () => {
     >
       <h1 className="text-primary-orange text-xl heading ">Contact me</h1>
       <div className="flex items-center flex-wrap max-sm:flex-col gap-5 ">
-        <div className="flex-1">
+        <div triggerOnce className="flex-1">
           <img src={logo} alt="logo" width={"250px"} />
           <span className="  my-3 font-semibold linear-text-bg text-3xl ">
             Any Query ?
