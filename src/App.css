@@ -125,14 +125,15 @@
   aspect-ratio: 3 / 2;
 }
 .card {
-  background: #202327;
+  background: #1a1b1d;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
 }
 
 .card > * {
-  z-index: 10;
+  position: relative;
+  z-index: 100;
 }
 
 .card::before {
@@ -142,6 +143,7 @@
   background: #fcac11;
   top: -100px;
   bottom: -150px;
+  z-index: -1;
   animation: rotBGimg 8s linear infinite;
   transition: all 2s linear;
 }
@@ -159,7 +161,7 @@
 .card::after {
   content: "";
   position: absolute;
-  background: #070707;
+  background: #1a1b1d;
   inset: 5px;
   border-radius: 15px;
 }
