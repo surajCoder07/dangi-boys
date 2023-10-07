@@ -20,7 +20,7 @@ const HeroBanner = () => {
       <Header />
       <div className="p-web max-sm:p-mobile h-[60%] max-sm:py-5 max-sm:pb-9  flex gap-4 max-sm:flex-col ">
         <div className="flex-1 flex flex-col justify-evenly">
-          <Slide triggerOnce={true}>
+          <Slide triggerOnce={true} className="z-30">
           <h1 className=" z-20  relative text-7xl max-sm:text-5xl max-[300px]:text-4xl font-semibold my-2">
           <span className="text-shadow"> Hey I'm </span>
             <span className="linear-text-bg ">Shatish Dangi</span>
