@@ -72,7 +72,6 @@ transition-duration: 0.3s;
         left: 0;
         transition-duration: 0.3s;
 
-        /* z-index: -1; */
         
 }
 .btn:hover::after,.btn:hover::before{
@@ -112,10 +111,62 @@ transition-duration: 0.3s;
 .heading::after{
         content: "";
         position: absolute;
-        width: 40px;
+        width: 50px;
         height: 2px;
         bottom: 4px ;
         left: 10px;
         background-color: #fcac11;
 
 }
+.tool-card{
+    background: rgba(252,172,17, 0.87);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+
+
+}
+.tool-card img{
+        aspect-ratio: 3 / 2;
+}
+.card {
+        background: #202327;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      
+      .card >*{
+        z-index: 10;
+      }
+      
+      
+      .card::before {
+        content: '';
+        position: absolute;
+        width:140px;
+        background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+        top: -100px;
+        bottom: -150px;
+        animation: rotBGimg 3s linear infinite;
+        transition: all 0.2s linear;
+      }
+      
+      @keyframes rotBGimg {
+        from {
+          transform: rotate(0deg);
+        }
+      
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .card::after {
+        content: '';
+        position: absolute;
+        background: #070707;
+        ;
+        inset: 5px;
+        border-radius: 15px;
+      }  
