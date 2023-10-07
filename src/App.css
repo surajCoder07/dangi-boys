@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 #hero-banner::after {
   content: "";
@@ -8,7 +9,7 @@
   width: 100%;
   height: 100%;
   background-image: url("../src/assets/bg-2.jpg");
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
@@ -20,23 +21,26 @@
   opacity: 0.9999;
 }
 #hero-banner::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background-color: rgba(-57, 17, 23, 0.5);
-        
-        top: 0;
-        right: 0;
-        z-index: -1;
-        filter: brightness(-30);
-        opacity: 0.9999;
-      }
 
+  top: 0;
+  right: 0;
+  z-index: -1;
+  filter: brightness(-30);
+  opacity: 0.9999;
+}
 
 .bg-opacity-bottom {
-  background-image: linear-gradient(180deg, rgba(4, 21, 45, 0), #070707 103.17%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(4, 21, 45, 0),
+    #070707 103.17%
+  );
 }
 .linear-text-bg {
   -webkit-text-fill-color: transparent;
@@ -45,128 +49,117 @@
   background-clip: text;
 }
 .text-shadow {
-        text-shadow: 2px 0 5px #070707;
+  text-shadow: 2px 0 5px #070707;
 }
-.btn{
-        position: relative;
+.btn {
+  position: relative;
 }
-.btn::after{
-content: "";
-width: 0%;
-height: 2px;
-position: absolute;
-background-image:linear-gradient(to right, #ff9680, #fcac11) ;
-bottom: 0;
-right: 0;
-transition-duration: 0.3s;
-/* z-index: -1; */
-
+.btn::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-image: linear-gradient(to right, #ff9680, #fcac11);
+  bottom: 0;
+  right: 0;
+  transition-duration: 0.3s;
+  /* z-index: -1; */
 }
-.btn::before{
-        content: "";
-        width: 0%;
-        height: 2px;
-        position: absolute;
-        background-image:linear-gradient(to right, #ff9680, #fcac11) ;
-        top: 0;
-        left: 0;
-        transition-duration: 0.3s;
-
-        
+.btn::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-image: linear-gradient(to right, #ff9680, #fcac11);
+  top: 0;
+  left: 0;
+  transition-duration: 0.3s;
 }
-.btn:hover::after,.btn:hover::before{
-        width: 100%;
+.btn:hover::after,
+.btn:hover::before {
+  width: 100%;
 }
-.overflow-border{
-        z-index: 1;
+.overflow-border {
+  z-index: 1;
 }
-.overflow-border::after{
-        content: "";
-        position: absolute;
-        border:3px solid #fcac11;
-        height: 107%;
-        width: 370px;
-        transform: rotate3d(10deg);
-        top: -10px;
-        z-index: -1;
-        border-radius: 10px;
-
-        
+.overflow-border::after {
+  content: "";
+  position: absolute;
+  border: 3px solid #fcac11;
+  height: 107%;
+  width: 370px;
+  transform: rotate3d(10deg);
+  top: -10px;
+  z-index: -1;
+  border-radius: 10px;
 }
-.heading{
-        position: relative;
-        padding-bottom: 10px;
-        
+.heading {
+  position: relative;
+  padding-bottom: 10px;
 }
-.heading::before{
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        bottom: 0;
-        background-color: #fcac11;
-        border-radius: 50%;
-
+.heading::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  background-color: #fcac11;
+  border-radius: 50%;
 }
-.heading::after{
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 2px;
-        bottom: 4px ;
-        left: 10px;
-        background-color: #fcac11;
-
+.heading::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  bottom: 4px;
+  left: 10px;
+  background-color: #fcac11;
 }
-.tool-card{
-    background: rgba(252,172,17, 0.87);
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+.tool-card {
+  background: rgba(252, 172, 17, 0.87);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-
-
 }
-.tool-card img{
-        aspect-ratio: 3 / 2;
+.tool-card img {
+  aspect-ratio: 3 / 2;
 }
 .card {
-        background: #202327;
-        position: relative;
-        overflow: hidden;
-        border-radius: 20px;
-      }
-      
-      .card >*{
-        z-index: 10;
-      }
-      
-      
-      .card::before {
-        content: '';
-        position: absolute;
-        width:140px;
-        background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-        top: -100px;
-        bottom: -150px;
-        animation: rotBGimg 3s linear infinite;
-        transition: all 0.2s linear;
-      }
-      
-      @keyframes rotBGimg {
-        from {
-          transform: rotate(0deg);
-        }
-      
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      
-      .card::after {
-        content: '';
-        position: absolute;
-        background: #070707;
-        ;
-        inset: 5px;
-        border-radius: 15px;
-      }  
+  background: #202327;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card > * {
+  z-index: 10;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  background: #fcac11;
+  top: -100px;
+  bottom: -150px;
+  animation: rotBGimg 8s linear infinite;
+  transition: all 2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #070707;
+  inset: 5px;
+  border-radius: 15px;
+}

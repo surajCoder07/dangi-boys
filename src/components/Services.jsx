@@ -1,23 +1,35 @@
-import React from 'react'
-import photo from "../assets/bg.png"
+import React from "react";
+import { services } from "../utils/services";
 
 const Services = () => {
   return (
-    <div className='p-web max-sm:p-mobile py-10 bg-primary-bg'>
-    
-        <h1 className='text-primary-orange text-xl heading '>Our Services </h1>
+    <div id="services" className="p-web max-sm:p-mobile py-10 bg-primary-bg">
+      <h1 className="text-primary-orange text-xl heading ">Our Services </h1>
 
-      <div className='py-10'>
-        <div className='card p-3 text-white w-[350px] h-[500px] flex flex-col'>
-          <img src={photo} alt='img' className='z-20 h-[200px] w-full object-cover rounded-t-md' />
-          <div className='text-white'>Wedding Videography</div>
-          <div>
-            
-          </div>
-        </div>
+      <div className="py-10 flex flex-wrap justify-around">
+        {services?.map((service) => {
+          return (
+            <div
+              key={service.id}
+              className="card p-3 text-white w-[350px] gap-3 z-30 my-5 flex flex-col "
+            >
+              <img
+                src={service?.src}
+                alt="img"
+                className="z-40 h-[200px] max-sm:h-[150px] w-full object-cover rounded-t-md"
+              />
+              <h1 className="text-white text-center py-3 z-50 font-semibold text-2xl max-sm:text-xl">
+                {service?.title}
+              </h1>
+              <p className="text-gray-300 text-justify px-2  max-sm:text-sm">
+                {service?.desc}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
