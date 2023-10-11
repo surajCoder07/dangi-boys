@@ -26,12 +26,7 @@ const Header = () => {
         ${isOpen ? " max-sm:-translate-x-0 " : "max-sm:-translate-x-[100%]"}`}
       >
         <ul className="flex items-center gap-5 max-sm:flex-col z-[9999] relative ">
-          <li
-            onClick={() => handleClick()}
-            className="cursor-pointer text-lg text-shadow btn"
-          >
-            <a>Home</a>
-          </li>
+          
           <li
             onClick={() => handleClick()}
             className="cursor-pointer text-lg text-shadow btn"
@@ -54,6 +49,12 @@ const Header = () => {
             onClick={() => handleClick()}
             className="cursor-pointer text-lg text-shadow btn"
           >
+            <a href="#packages">Our Packages</a>
+          </li>
+          <li
+            onClick={() => handleClick()}
+            className="cursor-pointer text-lg text-shadow btn"
+          >
             <a href="#work">Work</a>
           </li>
           <li
@@ -61,6 +62,12 @@ const Header = () => {
             className="cursor-pointer text-lg text-shadow btn"
           >
             <a href="#contact">Contact me</a>
+          </li>
+         
+          <li className="cursor-pointer text-lg text-shadow border border-primary-orange px-2 py-1 rounded-sm bg-primary-orange text-white font-semibold  hover:bg-transparent duration-300 ">
+            <a href="https://wa.me/9627283304?text=Hello" target="blank">
+              Book now
+            </a>
           </li>
         </ul>
       </Fade>
