@@ -8,12 +8,12 @@ const Services = () => {
     
         <h1 className='text-primary-orange text-xl heading '>Our Services </h1>
 
-      <div className='py-10 flex flex-wrap justify-around'>
+      <div className='py-10 flex flex-wrap gap-5 justify-around'>
 
       {
         services?.map(service=>{
           return <div key={service.id} className='card duration-200 hover:scale-[1.01] p-3 text-white w-[350px] gap-3 z-30 my-5 flex flex-col '>
-          <Fade className='w-full'>
+          <Fade className='w-full' triggerOnce>
           <img src={service?.src} alt='img' className='z-40 h-[200px] max-sm:h-[150px] w-full object-cover rounded-t-md' />
           <h1 className='text-white text-center py-3 z-50 font-semibold text-2xl max-sm:text-xl'>{service?.title}</h1>
           <p className='text-gray-300 text-justify px-2  max-sm:text-sm'>
